@@ -99,7 +99,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="flex flex-col md:flex-row items-center justify-between">
             <p className="text-sm text-foreground/60">
-              © 2024 Prime Estate. All rights reserved.
+              © 2026 Prime Estate. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0 text-sm">
               <a href="#" className="text-foreground/60 hover:text-primary transition-colors">Privacy Policy</a>
