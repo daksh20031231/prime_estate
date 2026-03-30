@@ -101,7 +101,7 @@ export function FeaturedProperties() {
   }, [])
 
   return (
-    <section id="properties" className="py-20 md:py-32 bg-secondary/30">
+    <section id="properties" className="py-20 md:py-32 bg-secondary/30 dark:bg-secondary/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Heading */}
@@ -129,7 +129,7 @@ export function FeaturedProperties() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="bg-white rounded-2xl shadow-lg overflow-hidden"
+              className="bg-card text-card-foreground border border-border rounded-2xl shadow-lg overflow-hidden"
             >
 
               {/* Image Section */}
@@ -198,7 +198,7 @@ export function FeaturedProperties() {
               {/* Content */}
               <div className="p-6 space-y-4">
                 <div>
-                  <h3 className="text-xl font-bold">{property.name}</h3>
+                  <h3 className="text-xl font-bold text-foreground">{property.name}</h3>
                   <p className="text-sm text-muted-foreground">
                     📍 {property.location}
                   </p>
@@ -210,17 +210,17 @@ export function FeaturedProperties() {
                 <div className="grid grid-cols-3 gap-4 text-center">
                   <div>
                     <Bed className="mx-auto mb-1 text-primary" />
-                    <p>{property.beds}</p>
+                    <p className="text-foreground">{property.beds}</p>
                     <span className="text-xs text-muted-foreground">Beds</span>
                   </div>
                   <div>
                     <Bath className="mx-auto mb-1 text-primary" />
-                    <p>{property.baths}</p>
+                    <p className="text-foreground">{property.baths}</p>
                     <span className="text-xs text-muted-foreground">Baths</span>
                   </div>
                   <div>
                     <Square className="mx-auto mb-1 text-primary" />
-                    <p>{property.sqft}</p>
+                    <p className="text-foreground">{property.sqft}</p>
                     <span className="text-xs text-muted-foreground">Sq.ft</span>
                   </div>
                 </div>

@@ -35,7 +35,7 @@ const stats = [
 
 export function JoinUs() {
   return (
-    <section id="join-us" className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-background to-accent/5 relative overflow-hidden">
+    <section id="join-us" className="py-20 md:py-32 bg-gradient-to-br from-primary/5 via-background to-accent/5 dark:from-primary/10 dark:to-accent/10 relative overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
@@ -91,7 +91,7 @@ export function JoinUs() {
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     whileHover={{ y: -5 }}
-                    className="p-4 bg-white rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all"
+                    className="p-4 bg-card text-card-foreground rounded-xl border border-border hover:border-primary/30 hover:shadow-lg transition-all"
                   >
                     <div className="flex items-start space-x-3">
                       <motion.div
@@ -139,7 +139,7 @@ export function JoinUs() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.05, y: -10 }}
-                className="p-8 bg-white rounded-2xl border border-border shadow-lg hover:shadow-xl transition-all text-center"
+                className="p-8 bg-card text-card-foreground rounded-2xl border border-border shadow-lg hover:shadow-xl transition-all text-center"
               >
                 <motion.p
                   initial={{ opacity: 0 }}
