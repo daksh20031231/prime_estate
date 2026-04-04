@@ -24,13 +24,20 @@ const propertyOneImages = [
 ]
 
 const propertyTwoImages = [
-  '/listings/id-2/IMG_3150.jpg',
-  '/listings/id-2/IMG_3151.jpg',
-  '/listings/id-2/IMG_3152.jpg',
-  '/listings/id-2/IMG_3153.jpg',
-  '/listings/id-2/IMG_3154.jpg',
-  '/listings/id-2/IMG_3157.jpg',
-  '/listings/id-2/IMG_3158.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.28 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.28.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.29 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.29.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.30 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.30 (2).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.30.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.31 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.31.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.32 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.32.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.33 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.33.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.34.jpg',
 ]
 
 const propertyThreeImages = [
@@ -42,39 +49,80 @@ const propertyThreeImages = [
   '/listings/id-3/IMG_3148.jpg',
 ]
 
+
+const propertyFourImages = [
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.00.27.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.01.46.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.01.49.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.01.52.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.04.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.05.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.06 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.06.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.07.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.08 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.08.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.09.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.10 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.10.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.11.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.13 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.13.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.14.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.15 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.15.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.16.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.17.jpeg',
+]
+
 const properties = [
   {
     id: 1,
-    name: 'Luxury Penthouse',
+    name: '2 BHK Penthouse - Gated Society',
     location: 'Provident Park Square, Bengaluru',
-    price: '₹1 Cr',
+    price: '₹ 1 Cr',
     beds: 2,
     baths: 2,
     sqft: '1000',
+    furnishType: 'Unfurnished',
     images: propertyOneImages,
     type: '2 BHK Penthouse Apartment',
   },
   {
     id: 2,
-    name: 'Premium Villa',
-    location: 'Provident Park Square, Bengaluru',
-    price: '₹25000',
+    name: '2 BHK Apartment - Gated Society',
+    location: 'Assets Canvas and Cove, Bengaluru',
+    price: '₹ 45000',
     beds: 2,
-    baths: 1,
-    sqft: '750',
+    baths: 2,
+    sqft: '958',
+    furnishType: 'Semi Furnished',
     images: propertyTwoImages,
     type: '1.5 BHK Apartment',
   },
   {
     id: 3,
-    name: 'Modern Townhouse',
-    location: 'Koramangala, Bengaluru',
-    price: '₹32000',
+    name: '2 BHK Apartment - Gated Society',
+    location: 'Provident Park Square, Bengaluru',
+    price: '₹ 32000',
     beds: 2,
     baths: 2,
     sqft: '900',
+    furnishType: 'Semi Furnished',
     images: propertyThreeImages,
-    type: '2BHK Apartment',
+    type: '2 BHK Apartment',
+  },
+  {
+    id: 4,
+    name: 'Luxury 4 BHK Apartment - Gated Society',
+    location: 'Prestige Falcon City, Bengaluru',
+    price: '₹ 1.5L',
+    beds: 4,
+    baths: 4,
+    sqft: '2689',
+    furnishType: 'Fully furnished',
+    images: propertyFourImages,
+    type: '4 BHK Apartment',
   },
 ]
 
@@ -121,7 +169,7 @@ export function FeaturedProperties() {
         </motion.div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {properties.map((property, index) => (
             <motion.div
               key={property.id}
@@ -176,6 +224,12 @@ export function FeaturedProperties() {
                   </div>
                 )}
 
+                {property.id === 4 && (
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                    For Rent
+                  </div>
+                )}
+
                 {/* Indicators */}
                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
                   {property.images.map((_, i) => (
@@ -223,6 +277,12 @@ export function FeaturedProperties() {
                     <p className="text-foreground">{property.sqft}</p>
                     <span className="text-xs text-muted-foreground">Sq.ft</span>
                   </div>
+                </div>
+
+
+                <div className="flex items-center justify-between rounded-lg border border-border bg-secondary/40 px-3 py-2">
+                  <span className="text-xs text-muted-foreground">Furnish Type</span>
+                  <span className="text-sm font-semibold text-foreground">{property.furnishType}</span>
                 </div>
 
                 {/* Button */}

@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { ChevronDown, MapPin } from 'lucide-react'
+import { ChevronDown, MapPin, Bed, Bath, Square } from 'lucide-react'
 
 const propertyImages = [
   'linear-gradient(135deg, #6366f1, #a855f7)',
@@ -10,7 +10,7 @@ const propertyImages = [
   'linear-gradient(135deg, #ec4899, #f43f5e)',
 ]
 
-const southBengaluruCardOneImages = [
+const southCardOneImages = [
   '/listings/id-1/IMG_2802.jpg',
   '/listings/id-1/IMG_2803.jpg',
   '/listings/id-1/IMG_2804.jpg',
@@ -23,7 +23,96 @@ const southBengaluruCardOneImages = [
   '/listings/id-1/IMG_2811.jpg',
 ]
 
-const maxRegionCardImages = Math.max(propertyImages.length, southBengaluruCardOneImages.length)
+const northCardOneImages = [
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.28 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.28.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.29 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.29.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.30 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.30 (2).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.30.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.31 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.31.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.32 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.32.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.33 (1).jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.33.jpg',
+  '/listings/id-4/WhatsApp Image 2026-04-04 at 16.43.34.jpg',
+]
+
+const southCardThreeImages = [
+  '/listings/id-3/IMG_3143.jpg',
+  '/listings/id-3/IMG_3144.jpg',
+  '/listings/id-3/IMG_3145.jpg',
+  '/listings/id-3/IMG_3146.jpg',
+  '/listings/id-3/IMG_3147.jpg',
+  '/listings/id-3/IMG_3148.jpg',
+]
+
+const southCardFourImages = [
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.00.27.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.01.46.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.01.49.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.01.52.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.04.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.05.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.06 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.06.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.07.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.08 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.08.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.09.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.10 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.10.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.11.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.13 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.13.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.14.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.15 (1).jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.15.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.16.jpeg',
+  '/listings/id-5/WhatsApp Image 2026-04-04 at 20.02.17.jpeg',
+]
+
+const southCardFiveImages = [
+  '/listings/id-2/IMG_3150.jpg',
+  '/listings/id-2/IMG_3151.jpg',
+  '/listings/id-2/IMG_3152.jpg',
+  '/listings/id-2/IMG_3153.jpg',
+  '/listings/id-2/IMG_3154.jpg',
+  '/listings/id-2/IMG_3157.jpg',
+  '/listings/id-2/IMG_3158.jpg',
+]
+
+const southCardSixImages = [
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.04 (1).jpeg',
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.04 (2).jpeg',
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.04.jpeg',
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.05 (1).jpeg',
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.05.jpeg',
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.06 (1).jpeg',
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.06.jpeg',
+  '/listings/id-6/WhatsApp Image 2026-04-04 at 16.46.07.jpeg',
+]
+
+const northCardTwoImages = [
+  '/listings/id-7/WhatsApp Image 2026-04-04 at 22.52.40.jpeg',
+  '/listings/id-7/WhatsApp Image 2026-04-04 at 22.52.41 (1).jpeg',
+  '/listings/id-7/WhatsApp Image 2026-04-04 at 22.52.41.jpeg',
+  '/listings/id-7/WhatsApp Image 2026-04-04 at 22.52.42 (1).jpeg',
+  '/listings/id-7/WhatsApp Image 2026-04-04 at 22.52.42.jpeg',
+]
+
+const maxRegionCardImages = Math.max(
+  propertyImages.length,
+  southCardOneImages.length,
+  northCardOneImages.length,
+  southCardThreeImages.length,
+  southCardFourImages.length,
+  southCardFiveImages.length,
+  southCardSixImages.length,
+  northCardTwoImages.length
+)
 
 const regions = [
   {
@@ -31,7 +120,18 @@ const regions = [
     description: 'IT Hub Excellence',
     areas: ['Whitefield', 'Marathahalli', 'Indiranagar', 'CV Raman Nagar'],
     highlights: [
-      // PROPERTY ADD
+      {
+        name: '1 BHK Apartment - Standalone',
+        location: 'Whitefiled, Bengaluru',
+        price: '₹ 20,000',
+        type: '1 BHK Apartment',
+        status: 'For Rent',
+        beds: 1,
+        baths: 1,
+        sqft: '850',
+        furnishType: 'Semi Furnished',
+        images: northCardTwoImages,
+      },
     ],
   },
   {
@@ -39,40 +139,102 @@ const regions = [
     description: 'Lifestyle & Culture',
     areas: ['Vajrahalli', 'Silk Institute', 'JP Nagar', 'Jayanagar'],
     highlights: [
-      { name: 'Luxury Penthouse Apartment', price: '₹1 Cr', type: '2 BHK' },
-    ],
+      {
+        name: '2 BHK Penthouse - Gated Society',
+        location: 'Provident Park Square, Bengaluru',
+        price: '₹1 Cr',
+        type: '2 BHK Penthouse Apartment',
+        status: 'For Sale',
+        beds: 2,
+        baths: 2,
+        sqft: '1000',
+        furnishType: 'Unfurnished',
+        images: southCardOneImages,
+      },
+      {
+        name: '2 BHK Apartment - Gated Society',
+        location: 'Assets Canvas and Cove, Bengaluru',
+        price: '₹ 45,000',
+        type: '2 BHK Apartment',
+        status: 'For Rent',
+        beds: 2,
+        baths: 2,
+        sqft: '958',
+        furnishType: 'Fully Furnished',
+        images: northCardOneImages,
+      },
+      {
+        name: '2 BHK Apartment - Gated Society',
+        location: 'Provident Park Square, Bengaluru',
+        price: '₹32,000',
+        type: '2 BHK Apartment',
+        status: 'For Rent',
+        beds: 2,
+        baths: 2,
+        sqft: '900',
+        furnishType: 'Semi Furnished',
+        images: southCardThreeImages,
+      },
+      {
+        name: '4 BHK Apartment - Gated Society',
+        location: 'Prestige Falcony City, Bengaluru',
+        price: '₹ 1.5L',
+        type: '4 BHK Apartment',
+        status: 'For Rent',
+        beds: 4,
+        baths: 4,
+        sqft: '2689',
+        furnishType: 'Fully furnished',
+        images: southCardFourImages,
+      },
+      {
+        name: '1.5 BHK Apartment - Gated Society',
+        location: 'Provident Park Square, Bengaluru',
+        price: '₹ 25,000',
+        type: '1.5 BHK Apartment',
+        status: 'For Rent',
+        beds: 2,
+        baths: 1,
+        sqft: '700',
+        furnishType: 'Semi Furnished',
+        images: southCardFiveImages,
+      },
+      {
+        name: '3 BHK Apartment - Gated Society',
+        location: 'South Bengaluru, Bengaluru',
+        price: '₹ 49,000',
+        type: '3 BHK Apartment',
+        status: 'For Rent',
+        beds: 3,
+        baths: 2,
+        sqft: '1215',
+        furnishType: 'Semi Furnished',
+        images: southCardSixImages,
+      },    ],
   },
   {
     name: 'East Bengaluru',
     description: 'Tech Valley',
     areas: ['Bellandur', 'Sarjapur', 'Devarabisanahalli', 'Hoodi'],
-    highlights: [
-      // IMAGE ADD
-    ],
+    highlights: [],
   },
   {
     name: 'West Bengaluru',
     description: 'Urban Development',
     areas: ['Yeshwanthpur', 'Rajajinagar', 'Malleshwaram', 'Hebbal'],
-    highlights: [
-      
-    ],
+    highlights: [],
   },
   {
     name: 'Central Bengaluru',
     description: 'Commercial Hub',
     areas: ['MG Road', 'Bangalore Fort', 'Shivajinagar', 'Commercial Street'],
-    highlights: [
-      
-    ],
+    highlights: [],
   },
   {
     name: 'Outer Ring Road',
     description: 'Emerging Markets',
     areas: ['Rachenahalli', 'Varthur', 'Mahadevapura', 'Budigere'],
-    highlights: [
-      
-    ],
+    highlights: [],
   },
 ]
 
@@ -248,10 +410,9 @@ export function RegionsServed() {
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
                           {region.highlights.map((property, i) => (
                             (() => {
-                              const cardImages =
-                                region.name === 'South Bengaluru' && i === 0
-                                  ? southBengaluruCardOneImages
-                                  : propertyImages
+                              const cardImages = 'images' in property && property.images
+                                ? property.images
+                                : propertyImages
                               const activeImageIndex = currentImageIndex % cardImages.length
 
                               return (
@@ -286,6 +447,16 @@ export function RegionsServed() {
                                   {property.type}
                                 </div>
 
+                                {'status' in property && property.status && (
+                                  <div
+                                    className={`absolute top-4 left-4 text-white px-3 py-1 rounded-full text-xs font-semibold ${
+                                      property.status === 'For Sale' ? 'bg-emerald-600' : 'bg-red-600'
+                                    }`}
+                                  >
+                                    {property.status}
+                                  </div>
+                                )}
+
                                 <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2">
                                   {cardImages.map((_, imageIndex) => (
                                     <button
@@ -302,27 +473,37 @@ export function RegionsServed() {
 
                               <div className="p-6 space-y-4">
                                 <div>
-                                  <h5 className="text-lg md:text-xl font-bold text-foreground group-hover:text-primary transition-colors">
+                                  <h5 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">
                                     {property.name}
                                   </h5>
-                                  <p className="text-xs text-foreground/50 mt-1">Location in {region.name}</p>
-                                </div>
-                                
-                                <div className="pt-2 border-t border-border">
-                                  <div className="flex items-baseline justify-between mb-2">
-                                    <span className="text-sm text-foreground/60">Price Range</span>
-                                    <p className="text-2xl md:text-3xl font-bold text-primary">
-                                      {property.price}
-                                    </p>
-                                  </div>
-                                  <p className="text-xs text-foreground/50">Average property range in this area</p>
+                                  <p className="text-sm text-muted-foreground">
+                                    📍 {'location' in property ? property.location : region.name}
+                                  </p>
                                 </div>
 
-                                <div className="flex items-center justify-between pt-2">
-                                  <span className="text-sm font-semibold text-foreground">Property Type</span>
-                                  <span className="text-sm bg-primary/15 hover:bg-primary/25 text-primary px-3 py-1.5 rounded-full font-bold transition-colors">
-                                    {property.type}
-                                  </span>
+                                <p className="text-2xl font-bold text-primary">{property.price}</p>
+
+                                <div className="grid grid-cols-3 gap-4 text-center">
+                                  <div>
+                                    <Bed className="mx-auto mb-1 text-primary" />
+                                    <p className="text-foreground">{'beds' in property ? property.beds : '-'}</p>
+                                    <span className="text-xs text-muted-foreground">Beds</span>
+                                  </div>
+                                  <div>
+                                    <Bath className="mx-auto mb-1 text-primary" />
+                                    <p className="text-foreground">{'baths' in property ? property.baths : '-'}</p>
+                                    <span className="text-xs text-muted-foreground">Baths</span>
+                                  </div>
+                                  <div>
+                                    <Square className="mx-auto mb-1 text-primary" />
+                                    <p className="text-foreground">{'sqft' in property ? property.sqft : '-'}</p>
+                                    <span className="text-xs text-muted-foreground">Sq.ft</span>
+                                  </div>
+                                </div>
+
+                                <div className="flex items-center justify-between rounded-lg border border-border bg-secondary/40 px-3 py-2">
+                                  <span className="text-xs text-muted-foreground">Furnish Type</span>
+                                  <span className="text-sm font-semibold text-foreground">{'furnishType' in property ? property.furnishType : '-'}</span>
                                 </div>
                               </div>
 

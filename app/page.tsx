@@ -11,21 +11,23 @@ import { WhyChooseUs } from '@/components/why-choose-us'
 import { JoinUs } from '@/components/join-us'
 import { Contact } from '@/components/contact'
 import { Footer } from '@/components/footer'
+import { ListPropertyPopup } from '@/components/list-property-popup'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <Hero />
-      <About />
-      <FeaturedProperties />
-      <Services />
       <RegionsServed />
+      <FeaturedProperties />
+      <About />
+      <Services />
       <WhyChooseUs />
       <Stats />
       <JoinUs />
       <Contact />
       <Footer />
+      <ListPropertyPopup />
       
       {/* Chatbot Integration */}
       <script

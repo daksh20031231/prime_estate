@@ -30,18 +30,18 @@ export function Navbar() {
             whileHover={{ scale: 1.05 }}
             className="flex items-center"
           >
-            <a href="#" className="flex items-center space-x-2">
-
-              <span className="font-bold text-lg hidden sm:inline text-foreground">Prime Estate</span>
+            <a href="#" className="flex flex-col leading-tight">
+              <span className="font-bold text-lg text-foreground">Prime Estate</span>
+              <span className="text-[10px] sm:text-xs text-foreground/70 self-end">by ADINIA GROUP</span>
             </a>
           </motion.div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <a href="#about" className="text-sm font-medium hover:text-primary transition-colors">About</a>
-            <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Services</a>
-            <a href="#properties" className="text-sm font-medium hover:text-primary transition-colors">Properties</a>
             <a href="#regions" className="text-sm font-medium hover:text-primary transition-colors">Regions</a>
+            <a href="#properties" className="text-sm font-medium hover:text-primary transition-colors">Properties</a>
+            <a href="#services" className="text-sm font-medium hover:text-primary transition-colors">Services</a>
             <a href="#join-us" className="text-sm font-medium hover:text-primary transition-colors">Join Us</a>
             <a href="#contact" className="text-sm font-medium hover:text-primary transition-colors">Contact</a>
           </div>

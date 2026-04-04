@@ -4,30 +4,27 @@ import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
-const propertyImages = [
-  'https://lh3.googleusercontent.com/gps-cs-s/AHVAwepblusve53jwSPDO-PztZnO3GvT1nhU91L1fhIs52ZOiWkQ-xM9wd87XCl6sJtqhsakyCBVAAmFpRnh7cR39u8HSQSiEOuxSYenUOXOlwMQVrA80sp4xTyXkh2ui7-oWArDxlRR=s1360-w1360-h1020-rw',
-  'https://lh3.googleusercontent.com/gps-cs-s/AHVAwepGIeD_cdrac9qFEfHATcNH2IvbhZpU7ZjBoU02DWZonK1BMpOn3unPV_e15eQ78QbNwpl1LAqU6wo8UEJJF0JemrsMM_byCsnSUwARCVG0l9q1c4Xm9vCU572L8weJ-cG2WC2QHQ=s1360-w1360-h1020-rw',
-  'https://media.settlin.in/projects/3MbsugqcLWshWLFcm/images/IMG20240627145901.jpg',
+const heroSlides = [
+  { image: '/Hero_section_images/Prestige Falcon City.jpg', name: 'Pestige Falcon City' },
+  { image: '/Hero_section_images/Provident Park Square.jpg', name: 'Provident Park Square' },
+  { image: '/Hero_section_images/Assets Canvas and Cove.jpg', name: 'Assets Canvas and Cove' },
+  { image: '/Hero_section_images/Nandi Citadel.jpg', name: 'Nandi Citadel' },
+  { image: '/Hero_section_images/Sattva Misty Charm.jpg', name: 'Sattva Misty Charm' },
+  { image: '/Hero_section_images/Sobha Arena.jpg', name: 'Sobha Arena' },
 ]
 
-const propertyNames = [
-  'Provident Park Square',
-  'Sattva Misty Charm',
-  'Sobha Arena',
-]
-
-const fallbackHeroImage =
-  'https://future-hold.com/wp-content/uploads/2025/03/Provident-Park-Square-Future-Hold-1.jpg'
+const fallbackHeroImage = '/Hero_section_images/Assets Canvas and Cove.jpg'
 
 export function Hero() {
   const [currentImage, setCurrentImage] = useState(0)
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % propertyImages.length)
+      setCurrentImage((prev) => (prev + 1) % heroSlides.length)
     }, 5000)
     return () => clearInterval(interval)
   }, [])
+
   return (
     <section className="relative min-h-[calc(100vh-80px)] flex items-center justify-center overflow-hidden">
       {/* Animated Background Elements */}
@@ -111,7 +108,7 @@ export function Hero() {
               transition={{ duration: 4, repeat: Infinity }}
               className="relative w-full h-full"
             >
-              {propertyImages.map((imageUrl, index) => (
+              {heroSlides.map((slide, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0 }}
@@ -121,10 +118,9 @@ export function Hero() {
                 >
                   <div className="relative w-full h-full border border-white/20 shadow-2xl">
                     <img
-                      src={imageUrl}
+                      src={slide.image}
                       alt={`Prime Estate property ${index + 1}`}
                       className="w-full h-full object-cover"
-                      referrerPolicy="no-referrer"
                       onError={(event) => {
                         const img = event.currentTarget
                         img.onerror = null
@@ -134,7 +130,7 @@ export function Hero() {
                     <div className="absolute inset-0 bg-black/20" />
                     <div className="absolute left-6 bottom-6 text-white">
                       <p className="text-lg font-semibold">
-                        Premium Property {index + 1} - {propertyNames[index]}
+                        Premium Property {index + 1} - {slide.name}
                       </p>
                       <p className="text-sm text-white/80">Prime Estate Showcase</p>
                     </div>
@@ -144,7 +140,7 @@ export function Hero() {
 
               {/* Carousel Indicators */}
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-                {propertyImages.map((_, index) => (
+                {heroSlides.map((_, index) => (
                   <motion.button
                     key={index}
                     onClick={() => setCurrentImage(index)}

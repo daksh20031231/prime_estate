@@ -8,7 +8,7 @@ export function Footer() {
     { icon: Facebook, href: '#', label: 'Facebook' },
     { icon: Twitter, href: '#', label: 'Twitter' },
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Instagram, href: 'https://www.instagram.com/primeestate_properties/', label: 'Instagram' },
   ]
 
   return (
@@ -22,8 +22,9 @@ export function Footer() {
             viewport={{ once: true }}
             className="space-y-4"
           >
-            <div className="flex items-center space-x-2">
-              <span className="font-bold text-lg">Prime Estate</span>
+            <div className="flex flex-col leading-tight w-fit">
+              <span className="font-bold text-lg text-foreground">Prime Estate</span>
+              <span className="text-[10px] sm:text-xs text-foreground/70 self-end">by ADINIA GROUP</span>
             </div>
             <p className="text-foreground/60 text-sm">
               Premium real estate solutions for rental, buying, selling, and property management.
@@ -76,10 +77,13 @@ export function Footer() {
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => {
                 const Icon = social.icon
+                const isExternal = social.href.startsWith('http')
                 return (
                   <motion.a
                     key={index}
                     href={social.href}
+                    target={isExternal ? '_blank' : undefined}
+                    rel={isExternal ? 'noopener noreferrer' : undefined}
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.95 }}
                     className="w-10 h-10 rounded-lg bg-secondary flex items-center justify-center text-foreground/60 hover:bg-primary hover:text-primary-foreground transition-colors"

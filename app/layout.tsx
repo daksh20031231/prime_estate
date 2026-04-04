@@ -15,24 +15,7 @@ const _poppins = Poppins({
 export const metadata: Metadata = {
   title: 'Prime Estate | Premium Real Estate Solutions',
   description: 'Prime Estate provides end-to-end real estate services including rental, buying, selling and property management in Bengaluru.',
-  generator: 'v0.app',
-  icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
-  },
+  generator: 'Daksh Sharma',
 }
 
 export default function RootLayout({
