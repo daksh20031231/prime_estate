@@ -201,7 +201,7 @@ const regions = [
       },
       {
         name: '3 BHK Apartment - Gated Society',
-        location: 'South Bengaluru, Bengaluru',
+        location: 'Assets Canvas and Cove, Bengaluru',
         price: '₹ 49,000',
         type: '3 BHK Apartment',
         status: 'For Rent',
